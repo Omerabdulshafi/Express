@@ -1,10 +1,14 @@
 import express from 'express';
 import router from './router/router.js';
 import mongoose  from 'mongoose';
+import register from './router/register.js'
+import  sign from './router/signin.js';
+import dotenv from 'dotenv'
+dotenv.config();
 const app = express();
 
-const port = 3000;
- mongoose.connect("mongodb://localhost:27017")
+const PORT = process.env.PORT;
+ mongoose.connect(process.env.MONGODB)
  .then(()=>console.log("mongodb is connected"))
  .catch((err)=>console.log(err))
  
