@@ -1,4 +1,4 @@
-import register from "../modules/register";
+import register from "../modules/register.js";
 import bcrypt from "bcryptjs";
 
 const getRegisters = async(req, res)=>{

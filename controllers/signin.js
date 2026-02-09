@@ -1,4 +1,4 @@
-import register from "../modules/register";
+import register from "../modules/register.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
@@ -39,4 +39,4 @@ const singincontroller = async(req, res)=>{
   }
 };
 
-export default signInController;
+export default singincontroller;

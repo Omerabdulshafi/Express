@@ -18,6 +18,9 @@ const PORT = process.env.PORT;
  });
 
  app.use("/names", router);
-app.listen(port, ()=>{
-    console.log(`server is running on port${port}`)
+  app.use("/register", register);
+ app.use("/signin", sign);
+ 
+app.listen(PORT, ()=>{
+    console.log(`server is running on port ${PORT}`)
 })
