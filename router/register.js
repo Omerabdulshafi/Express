@@ -1,11 +1,13 @@
 import express from "express"
 
-import register from "../controllers/register.js"
+import {getRegisters,getNames} from "../controllers/register.js"
 
 
 const router=express.Router()
 
-router.post("/", register);
+router.post("/", getRegisters);
+router.get("/", getNames);
+
 
 
 
